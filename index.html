@@ -200,4 +200,596 @@
     .faq-q{padding:20px 24px;font-weight:600;font-size:0.92rem;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;user-select:none;transition:background 0.2s}
     .faq-q:hover{background:var(--off-white)}
     .arrow{flex-shrink:0;width:24px;height:24px;background:var(--off-white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.7rem;color:var(--royal);transition:transform 0.3s,background 0.2s}
-    .faq-ite
+    .faq-item.open .faq-q .arrow{transform:rotate(180deg);background:var(--royal);color:var(--white)}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.3s;padding:0 24px;font-size:0.87rem;color:var(--muted);line-height:1.75}
+    .faq-item.open .faq-a{max-height:200px;padding:0 24px 20px}
+
+    /* CONTACT */
+    #hubungi{background:var(--white)}
+    .contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+    .contact-info p{color:var(--muted);line-height:1.7;margin-bottom:32px;font-size:0.95rem}
+    .contact-items{display:flex;flex-direction:column;gap:16px}
+    .contact-item{display:flex;align-items:center;gap:14px;padding:16px 20px;background:var(--off-white);border-radius:10px;border:1px solid var(--border)}
+    .contact-icon{width:40px;height:40px;flex-shrink:0;background:linear-gradient(135deg,var(--royal),var(--royal-bright));border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem}
+    .contact-item-label{font-size:0.73rem;color:var(--muted);margin-bottom:2px}
+    .contact-item-val{font-size:0.9rem;font-weight:600;color:var(--navy)}
+    .contact-form{background:var(--off-white);border:1px solid var(--border);border-radius:20px;padding:36px}
+    .contact-form h3{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:var(--navy);margin-bottom:24px}
+    .form-group{margin-bottom:16px}
+    .form-group label{display:block;font-size:0.8rem;font-weight:600;color:var(--navy);margin-bottom:7px}
+    .form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 16px;border:1.5px solid var(--border);border-radius:9px;font-family:'DM Sans',sans-serif;font-size:0.88rem;color:var(--navy);background:var(--white);outline:none;transition:border-color 0.2s}
+    .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--royal)}
+    .form-group textarea{height:90px;resize:none}
+    .btn-submit{width:100%;padding:14px;background:var(--royal);color:var(--white);border:none;border-radius:9px;font-family:'DM Sans',sans-serif;font-size:0.95rem;font-weight:700;cursor:pointer;transition:background 0.2s,transform 0.15s}
+    .btn-submit:hover{background:var(--royal-bright);transform:translateY(-1px)}
+
+    /* FOOTER */
+    footer{background:var(--navy);padding:56px 6vw 30px;color:rgba(255,255,255,0.5)}
+    .footer-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+    .footer-brand p{font-size:0.82rem;color:rgba(255,255,255,0.4);line-height:1.7;margin-top:14px;max-width:240px}
+    .footer-col h5{font-size:0.82rem;font-weight:700;color:var(--white);margin-bottom:16px;letter-spacing:0.5px;text-transform:uppercase}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+    .footer-col ul li a{color:rgba(255,255,255,0.45);font-size:0.82rem;text-decoration:none;transition:color 0.2s}
+    .footer-col ul li a:hover{color:var(--gold)}
+    .footer-affiliate{margin-top:18px;background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.22);border-radius:10px;padding:14px 16px}
+    .footer-affiliate p{font-size:0.75rem;color:rgba(255,255,255,0.45);margin-bottom:8px}
+    .footer-affiliate a{display:inline-flex;align-items:center;gap:6px;color:var(--gold);font-size:0.82rem;font-weight:600;text-decoration:none;transition:color 0.2s}
+    .footer-affiliate a:hover{color:var(--gold-light)}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+    .footer-bottom p{font-size:0.78rem}
+    .footer-bottom a{color:var(--gold);text-decoration:none}
+    footer .logo-text{color:var(--white)}
+    footer .logo-text span{color:var(--gold)}
+
+    /* LIGHTBOX */
+    .lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.88);z-index:999;align-items:center;justify-content:center;padding:20px}
+    .lightbox.active{display:flex}
+    .lb-close{position:absolute;top:20px;right:24px;color:#fff;font-size:1.8rem;cursor:pointer;background:none;border:none;line-height:1;opacity:0.7;transition:opacity 0.2s}
+    .lb-close:hover{opacity:1}
+    .lb-box{background:var(--navy);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:36px;max-width:460px;width:100%;text-align:center}
+    .lb-box h3{font-family:'Playfair Display',serif;color:var(--white);font-size:1.3rem;margin-bottom:12px}
+    .lb-box p{color:rgba(255,255,255,0.55);font-size:0.88rem;line-height:1.7}
+
+    /* MOBILE */
+    @media(max-width:1024px){.testi-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:900px){.produk-wrap{grid-template-columns:1fr}.gallery-grid{grid-template-columns:1fr 1fr}.gallery-item.wide{grid-column:span 2}.testi-stats-row{grid-template-columns:1fr 1fr}}
+    @media(max-width:768px){
+      .nav-links{display:none;flex-direction:column;position:absolute;top:66px;left:0;right:0;background:var(--white);padding:20px 5vw;gap:16px;border-bottom:1px solid rgba(0,0,0,0.08)}
+      .nav-links.open{display:flex}
+      .hamburger{display:flex}
+      #hero{padding:100px 5vw 60px}
+      .hero-deco,.hero-glow{display:none}
+      .fungsi-wrap{grid-template-columns:1fr}
+      .steps-grid::before{display:none}
+      .contact-wrap{grid-template-columns:1fr}
+      .footer-top{grid-template-columns:1fr 1fr}
+      section{padding:60px 5vw}
+      .harga-card-single{padding:40px 28px}
+      .harga-features{grid-template-columns:1fr}
+      .testi-grid{grid-template-columns:1fr}
+    }
+    @media(max-width:480px){
+      .footer-top{grid-template-columns:1fr}
+      h1{font-size:2rem}
+      .hero-stats{gap:20px}
+      .gallery-grid{grid-template-columns:1fr}
+      .gallery-item.wide{grid-column:span 1;aspect-ratio:4/3}
+      .produk-specs{grid-template-columns:1fr}
+      .testi-stats-row{grid-template-columns:1fr;gap:12px}
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="logo">
+    <div class="logo-box">📺</div>
+    <div class="logo-text">TV<span>Solat</span>.live</div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#kenapa">Kenapa Kami</a></li>
+    <li><a href="#fungsi">Fungsi</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#harga">Harga</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#hubungi" class="btn-nav">Hubungi Kami</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" onclick="toggleNav()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-deco">
+    <svg viewBox="0 0 400 400" fill="none"><rect x="50" y="50" width="300" height="300" stroke="white" stroke-width="1"/><rect x="80" y="80" width="240" height="240" stroke="white" stroke-width="0.8" transform="rotate(45 200 200)"/><circle cx="200" cy="200" r="120" stroke="white" stroke-width="0.8"/><circle cx="200" cy="200" r="80" stroke="white" stroke-width="0.6"/><line x1="50" y1="200" x2="350" y2="200" stroke="white" stroke-width="0.5"/><line x1="200" y1="50" x2="200" y2="350" stroke="white" stroke-width="0.5"/><polygon points="200,80 230,160 320,160 252,210 276,290 200,240 124,290 148,210 80,160 170,160" stroke="white" stroke-width="0.7" fill="none"/></svg>
+  </div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="badge">🕌 Penyelesaian Terbaik untuk Masjid & Surau</div>
+    <h1>Sistem <span class="accent">Paparan Waktu Solat</span> Digital Terkini</h1>
+    <p class="hero-desc">TV Solat menyediakan sistem paparan waktu solat digital yang lengkap untuk masjid, surau, sekolah dan pejabat seluruh Malaysia. Mudah dipasang, mampu milik dan sentiasa terkini.</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/601XXXXXXXX?text=Assalamualaikum,%20saya%20berminat%20dengan%20TV%20Solat" class="btn-primary" target="_blank">💬 Hubungi Ejen</a>
+      <a href="#produk" class="btn-outline">🔍 Lihat Produk</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item"><div class="stat-num">500+</div><div class="stat-label">Masjid & Surau Dipasang</div></div>
+      <div class="stat-item"><div class="stat-num">13</div><div class="stat-label">Negeri Seluruh Malaysia</div></div>
+      <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Data Waktu Solat JAKIM</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- KENAPA KAMI -->
+<section id="kenapa">
+  <div class="section-head">
+    <div class="section-label">Kenapa Pilih TV Solat</div>
+    <h2>Direka Khas untuk Keperluan Masjid</h2>
+    <p class="section-sub">Kami faham keperluan masjid dan surau. Sistem kami dibina mesra pengguna, tanpa perlu kemahiran IT.</p>
+  </div>
+  <div class="features-grid">
+    <div class="feat-card"><div class="feat-icon">⚡</div><h3>Mudah Dipasang</h3><p>Hanya sambung HDMI ke TV. Tak perlu PC atau kemahiran IT. Siap pasang dalam masa kurang sejam.</p></div>
+    <div class="feat-card"><div class="feat-icon">📡</div><h3>Tanpa Internet</h3><p>Sistem boleh beroperasi sepenuhnya tanpa internet. Kemaskini menggunakan wireless mouse dan keyboard.</p></div>
+    <div class="feat-card"><div class="feat-icon">🕌</div><h3>Waktu Solat JAKIM</h3><p>Data waktu solat tahunan terus dari JAKIM mengikut zon yang telah ditetapkan, tepat dan boleh dipercayai.</p></div>
+    <div class="feat-card"><div class="feat-icon">💰</div><h3>Harga Mampu Milik</h3><p>Pelaburan sekali sahaja. Tiada bayaran bulanan atau yuran langganan. Sesuai untuk semua saiz masjid.</p></div>
+    <div class="feat-card"><div class="feat-icon">🖥️</div><h3>Sokong Pelbagai TV</h3><p>Serasi dengan mana-mana TV yang ada port HDMI. Tak perlu beli TV baru, guna TV sedia ada.</p></div>
+    <div class="feat-card"><div class="feat-icon">🔧</div><h3>Sokongan Remote</h3><p>Masalah teknikal? Kami boleh bantu dari jauh tanpa perlu datang ke lokasi. Jimat masa dan kos.</p></div>
+  </div>
+</section>
+
+<!-- FUNGSI -->
+<section id="fungsi">
+  <div class="fungsi-wrap">
+    <div class="fungsi-visual">
+      <div style="color:rgba(255,255,255,0.45);font-size:0.68rem;margin-bottom:16px;letter-spacing:1px;text-transform:uppercase;">Pratonton Paparan TV</div>
+      <div class="tv-mockup">
+        <div class="tv-header">
+          <div class="tv-title">Masjid Al-Ikhlas</div>
+          <div class="tv-date">Isnin, 14 April 2026</div>
+        </div>
+        <div class="tv-solat-name">Waktu Asar</div>
+        <div class="tv-time" id="liveClock">16:28</div>
+        <div class="tv-waktu-grid">
+          <div class="tv-waktu-item"><div class="nama">Subuh</div><div class="masa">5:58</div></div>
+          <div class="tv-waktu-item"><div class="nama">Zohor</div><div class="masa">1:18</div></div>
+          <div class="tv-waktu-item aktif"><div class="nama">Asar</div><div class="masa">4:28</div></div>
+          <div class="tv-waktu-item"><div class="nama">Maghrib</div><div class="masa">7:24</div></div>
+          <div class="tv-waktu-item"><div class="nama">Isyak</div><div class="masa">8:36</div></div>
+        </div>
+        <div class="tv-slide">📢 Kuliah Maghrib – Ustaz Ahmad Faizi | Setiap Malam</div>
+      </div>
+    </div>
+    <div>
+      <div class="section-label">Fungsi Sistem</div>
+      <h2>Semua yang Masjid Perlukan</h2>
+      <p class="section-sub" style="margin-bottom:28px;">Lebih dari sekadar paparan waktu solat. Pengurusan masjid yang lengkap dalam satu sistem.</p>
+      <ul class="fungsi-list">
+        <li class="fungsi-item"><div class="fungsi-dot">1</div><div><h4>Waktu Solat & Iqamah Timer</h4><p>Masa solat JAKIM tepat mengikut zon. Timer iqamah boleh diset berbeza untuk setiap 5 waktu.</p></div></li>
+        <li class="fungsi-item"><div class="fungsi-dot">2</div><div><h4>Slides Pengumuman Tanpa Had</h4><p>Masukkan sebarang pengumuman dalam bentuk slides. Interval masa boleh dilaras mengikut kehendak.</p></div></li>
+        <li class="fungsi-item"><div class="fungsi-dot">3</div><div><h4>Jadual Kuliah & Aktiviti</h4><p>Sistem secara automatik papar kuliah yang aktif sahaja berdasarkan tarikh yang ditetapkan.</p></div></li>
+        <li class="fungsi-item"><div class="fungsi-dot">4</div><div><h4>Audio Azan & Bacaan Surah</h4><p>Laungan azan 5 waktu dan bacaan surah secara automatik 30 minit sebelum masuk waktu.</p></div></li>
+        <li class="fungsi-item"><div class="fungsi-dot">5</div><div><h4>Live TV & Live Facebook</h4><p>Paparan khutbah Jumaat atau kuliah terus ke TV. Stream terus ke Facebook tanpa perlu PC tambahan.</p></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- GAMBAR PRODUK -->
+<section id="produk">
+  <div class="section-head">
+    <div class="section-label">Gambar Produk</div>
+    <h2>Peranti TV Solat</h2>
+    <p class="section-sub">Kotak kecil berkuasa besar. Sambung ke mana-mana TV melalui HDMI dan terus bersedia untuk beroperasi.</p>
+  </div>
+  <div class="produk-wrap">
+    <div style="position:relative;">
+      <div class="produk-img-box">
+        <div style="display:flex;flex-direction:column;align-items:center;width:100%;max-width:300px;position:relative;z-index:1;">
+          <!-- Hardware box -->
+          <div class="device-outer">
+            <div style="width:46px;height:46px;background:linear-gradient(135deg,var(--royal),var(--royal-bright));border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;">📺</div>
+            <div class="device-info">
+              <div class="device-name">TV Solat Box</div>
+              <div class="device-model">Model TSB-2024 · HDMI Out</div>
+              <div style="display:flex;align-items:center;gap:5px;margin-top:5px;">
+                <div class="device-led"></div>
+                <span style="font-size:0.55rem;color:#2ecc71;">Aktif</span>
+              </div>
+            </div>
+          </div>
+          <!-- HDMI tag -->
+          <div class="hdmi-tag" style="width:100%;margin-bottom:16px;">
+            <div class="hdmi-line"></div>
+            <div class="hdmi-label">HDMI</div>
+            <div class="hdmi-line"></div>
+          </div>
+          <!-- Screen -->
+          <div class="device-screen-wrap">
+            <div class="ds-top">
+              <div class="ds-masjid">Masjid Al-Ikhlas</div>
+              <div class="ds-date">14 Apr 2026</div>
+            </div>
+            <div class="ds-waktu-label">▶ WAKTU ASAR</div>
+            <div class="ds-time" id="deviceClock">16:28</div>
+            <div class="ds-grid">
+              <div class="ds-item"><span>Subuh</span><strong>5:58</strong></div>
+              <div class="ds-item"><span>Zohor</span><strong>1:18</strong></div>
+              <div class="ds-item on"><span>Asar</span><strong>4:28</strong></div>
+              <div class="ds-item"><span>Maghrib</span><strong>7:24</strong></div>
+              <div class="ds-item"><span>Isyak</span><strong>8:36</strong></div>
+            </div>
+          </div>
+        </div>
+        <div class="float-badge">
+          <strong>✓ Plug & Play</strong>
+          <span>Sambung HDMI, siap!</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p style="color:var(--muted);line-height:1.75;font-size:0.95rem;margin-bottom:28px;">Peranti TV Solat adalah kotak mini yang dipasang di belakang TV masjid. Ia berfungsi seperti komputer kecil yang memaparkan waktu solat, pengumuman, iqamah timer dan semua fungsi yang diperlukan tanpa kerumitan.</p>
+      <div class="produk-specs">
+        <div class="spec-item"><div class="spec-icon">🔌</div><h4>Sambungan HDMI</h4><p>Serasi dengan semua TV yang ada port HDMI. Universal dan mudah.</p></div>
+        <div class="spec-item"><div class="spec-icon">📶</div><h4>Wi-Fi Built-in</h4><p>Sokongan Wi-Fi untuk kemaskini remote dan fungsi Live Facebook.</p></div>
+        <div class="spec-item"><div class="spec-icon">💾</div><h4>Storan Tempatan</h4><p>Data waktu solat disimpan dalam peranti. Beroperasi 100% tanpa internet.</p></div>
+        <div class="spec-item"><div class="spec-icon">🔊</div><h4>Audio Output</h4><p>Keluar audio melalui TV atau sistem speaker masjid sedia ada.</p></div>
+        <div class="spec-item"><div class="spec-icon">🖱️</div><h4>Remote Control</h4><p>Kemaskini mudah menggunakan wireless keyboard & mouse.</p></div>
+        <div class="spec-item"><div class="spec-icon">☁️</div><h4>Cloud Slide Update</h4><p>Kemaskini slide pengumuman dari jauh melalui telefon atau PC.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="section-head center">
+    <div class="section-label">Gallery</div>
+    <h2>Paparan Sistem TV Solat</h2>
+    <p class="section-sub">Antaramuka yang bersih dan jelas, direka khas supaya jemaah boleh melihat dari jauh dengan selesa.</p>
+  </div>
+  <div class="gallery-grid">
+
+    <!-- 1: Wide – Paparan Utama -->
+    <div class="gallery-item wide" onclick="openLightbox('Paparan Utama Waktu Solat','Skrin penuh dengan waktu solat 5 waktu, jam digital, nama masjid dan tarikh Hijri. Direka untuk TV besar di dewan solat.')">
+      <div style="width:88%;height:82%;background:#0a1628;border-radius:10px;border:2px solid #1e3a6b;padding:16px;display:flex;flex-direction:column;justify-content:space-between;">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <div style="color:var(--gold);font-size:0.75rem;font-weight:700;">Masjid Nurul Iman, Kuala Lumpur</div>
+          <div style="color:rgba(255,255,255,0.38);font-size:0.62rem;">Isnin · 14 April 2026 · 16 Syawal 1447H</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="color:var(--gold);font-size:0.62rem;letter-spacing:2px;margin-bottom:4px;">▶ WAKTU ASAR</div>
+          <div style="font-family:'Playfair Display',serif;font-size:2.6rem;font-weight:900;color:#fff;letter-spacing:4px;line-height:1;">16:28</div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:6px;">
+          <div style="background:rgba(255,255,255,0.05);border-radius:6px;padding:6px 4px;text-align:center;"><div style="font-size:0.52rem;color:rgba(255,255,255,0.4);">Subuh</div><div style="font-size:0.68rem;color:#fff;font-weight:600;">5:58</div></div>
+          <div style="background:rgba(255,255,255,0.05);border-radius:6px;padding:6px 4px;text-align:center;"><div style="font-size:0.52rem;color:rgba(255,255,255,0.4);">Zohor</div><div style="font-size:0.68rem;color:#fff;font-weight:600;">1:18</div></div>
+          <div style="background:rgba(30,77,183,0.45);border:1px solid rgba(30,77,183,0.6);border-radius:6px;padding:6px 4px;text-align:center;"><div style="font-size:0.52rem;color:var(--gold-light);">Asar</div><div style="font-size:0.68rem;color:#fff;font-weight:600;">4:28</div></div>
+          <div style="background:rgba(255,255,255,0.05);border-radius:6px;padding:6px 4px;text-align:center;"><div style="font-size:0.52rem;color:rgba(255,255,255,0.4);">Maghrib</div><div style="font-size:0.68rem;color:#fff;font-weight:600;">7:24</div></div>
+          <div style="background:rgba(255,255,255,0.05);border-radius:6px;padding:6px 4px;text-align:center;"><div style="font-size:0.52rem;color:rgba(255,255,255,0.4);">Isyak</div><div style="font-size:0.68rem;color:#fff;font-weight:600;">8:36</div></div>
+        </div>
+        <div style="background:rgba(255,255,255,0.04);border-radius:6px;padding:8px;font-size:0.6rem;color:rgba(255,255,255,0.45);text-align:center;border:1px dashed rgba(255,255,255,0.1);">📢 Kuliah Maghrib bersama Ustaz Ahmad Faizi — Setiap Malam Selepas Maghrib</div>
+      </div>
+      <div class="gallery-overlay"><div class="gallery-label">Paparan Utama Waktu Solat</div></div>
+    </div>
+
+    <!-- 2: Iqamah Timer -->
+    <div class="gallery-item" onclick="openLightbox('Iqamah Timer','Countdown timer yang jelas untuk setiap waktu solat. Boleh diset berbeza untuk setiap 5 waktu mengikut keperluan masjid.')">
+      <div style="width:82%;height:82%;background:#0a1628;border-radius:10px;border:2px solid #1e3a6b;padding:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;">
+        <div style="color:rgba(255,255,255,0.45);font-size:0.58rem;letter-spacing:2px;">IQAMAH DALAM</div>
+        <div style="font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:900;color:var(--gold);line-height:1;">08:45</div>
+        <div style="color:rgba(255,255,255,0.35);font-size:0.58rem;">minit : saat</div>
+        <div style="width:100%;background:rgba(201,168,76,0.12);border-radius:6px;height:8px;overflow:hidden;"><div style="background:var(--gold);height:100%;width:40%;border-radius:6px;"></div></div>
+        <div style="color:var(--gold);font-size:0.75rem;font-weight:700;letter-spacing:1px;">ASAR</div>
+      </div>
+      <div class="gallery-overlay"><div class="gallery-label">Iqamah Timer</div></div>
+    </div>
+
+    <!-- 3: Slides Pengumuman -->
+    <div class="gallery-item" onclick="openLightbox('Slides Pengumuman','Slide pengumuman masjid yang bertukar secara automatik. Boleh dikemaskini dari jauh melalui telefon tanpa perlu hadir ke masjid.')">
+      <div style="width:82%;height:82%;background:#0a1628;border-radius:10px;border:2px solid #1e3a6b;padding:14px;display:flex;flex-direction:column;gap:8px;">
+        <div style="color:rgba(255,255,255,0.45);font-size:0.58rem;letter-spacing:1px;margin-bottom:4px;">📢 PENGUMUMAN MASJID</div>
+        <div style="background:rgba(30,77,183,0.2);border-left:3px solid var(--royal);border-radius:0 8px 8px 0;padding:8px 10px;">
+          <div style="font-size:0.68rem;color:#fff;font-weight:700;margin-bottom:3px;">Majlis Khatam Al-Quran</div>
+          <div style="font-size:0.58rem;color:rgba(255,255,255,0.5);">Sabtu, 19 April 2026 · Selepas Asar</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.04);border-left:3px solid rgba(201,168,76,0.5);border-radius:0 8px 8px 0;padding:8px 10px;">
+          <div style="font-size:0.68rem;color:#fff;font-weight:700;margin-bottom:3px;">Gotong Royong Masjid</div>
+          <div style="font-size:0.58rem;color:rgba(255,255,255,0.5);">Ahad, 20 April 2026 · 8:00 Pagi</div>
+        </div>
+        <div style="display:flex;justify-content:center;gap:5px;margin-top:4px;">
+          <div style="width:18px;height:4px;border-radius:2px;background:var(--royal);"></div>
+          <div style="width:7px;height:4px;border-radius:2px;background:rgba(255,255,255,0.15);"></div>
+          <div style="width:7px;height:4px;border-radius:2px;background:rgba(255,255,255,0.15);"></div>
+        </div>
+      </div>
+      <div class="gallery-overlay"><div class="gallery-label">Slides Pengumuman</div></div>
+    </div>
+
+    <!-- 4: Jadual Kuliah -->
+    <div class="gallery-item" onclick="openLightbox('Jadual Kuliah Auto','Sistem papar jadual kuliah yang aktif secara automatik mengikut tarikh dan hari yang ditetapkan tanpa perlu tetapkan semula.')">
+      <div style="width:82%;height:82%;background:#0a1628;border-radius:10px;border:2px solid #1e3a6b;padding:14px;display:flex;flex-direction:column;gap:8px;">
+        <div style="color:rgba(255,255,255,0.45);font-size:0.58rem;letter-spacing:1px;margin-bottom:4px;">📖 JADUAL KULIAH MINGGU INI</div>
+        <div style="background:rgba(30,77,183,0.25);border-left:3px solid var(--royal);border-radius:0 6px 6px 0;padding:7px 10px;">
+          <div style="font-size:0.68rem;color:#fff;font-weight:600;">Kuliah Subuh — Fiqh Harian</div>
+          <div style="font-size:0.57rem;color:rgba(255,255,255,0.45);">Ustaz Ahmad Hafiz · Setiap Ahad</div>
+        </div>
+        <div style="background:rgba(201,168,76,0.12);border-left:3px solid var(--gold);border-radius:0 6px 6px 0;padding:7px 10px;">
+          <div style="font-size:0.68rem;color:#fff;font-weight:600;">Kuliah Maghrib — Tafsir Al-Quran</div>
+          <div style="font-size:0.57rem;color:rgba(255,255,255,0.45);">Ustaz Faizi · Setiap Malam</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.03);border-left:3px solid rgba(255,255,255,0.1);border-radius:0 6px 6px 0;padding:7px 10px;">
+          <div style="font-size:0.68rem;color:rgba(255,255,255,0.45);font-weight:600;">Kelas Tajwid Dewasa</div>
+          <div style="font-size:0.57rem;color:rgba(255,255,255,0.3);">Sabtu & Ahad · 9:00 Pagi</div>
+        </div>
+      </div>
+      <div class="gallery-overlay"><div class="gallery-label">Jadual Kuliah Auto</div></div>
+    </div>
+
+    <!-- 5: Kutipan Tabung -->
+    <div class="gallery-item" onclick="openLightbox('Kutipan Tabung Masjid','Paparan jumlah kutipan tabung masjid mingguan dan bulanan yang boleh dikemaskini selepas setiap kutipan Jumaat.')">
+      <div style="width:82%;height:82%;background:#0a1628;border-radius:10px;border:2px solid #1e3a6b;padding:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;">
+        <div style="font-size:1.4rem;">💰</div>
+        <div style="color:rgba(255,255,255,0.45);font-size:0.58rem;letter-spacing:1px;">KUTIPAN TABUNG MASJID</div>
+        <div style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:#2ecc71;line-height:1;">RM 3,240</div>
+        <div style="color:rgba(255,255,255,0.3);font-size:0.58rem;">Jumaat, 11 April 2026</div>
+        <div style="display:flex;gap:8px;width:100%;margin-top:4px;">
+          <div style="flex:1;background:rgba(46,204,113,0.1);border-radius:6px;padding:7px;text-align:center;"><div style="font-size:0.52rem;color:rgba(255,255,255,0.4);">Minggu Ini</div><div style="font-size:0.7rem;color:#2ecc71;font-weight:700;">RM 820</div></div>
+          <div style="flex:1;background:rgba(46,204,113,0.1);border-radius:6px;padding:7px;text-align:center;"><div style="font-size:0.52rem;color:rgba(255,255,255,0.4);">Bulan Ini</div><div style="font-size:0.7rem;color:#2ecc71;font-weight:700;">RM 3,240</div></div>
+        </div>
+      </div>
+      <div class="gallery-overlay"><div class="gallery-label">Kutipan Tabung Masjid</div></div>
+    </div>
+
+    <!-- 6: Waktu Dunia -->
+    <div class="gallery-item" onclick="openLightbox('Waktu Dunia','Paparan waktu bandar-bandar utama dunia termasuk Makkah dan Madinah untuk memudahkan rujukan jemaah.')">
+      <div style="width:82%;height:82%;background:#0a1628;border-radius:10px;border:2px solid #1e3a6b;padding:14px;display:flex;flex-direction:column;gap:6px;">
+        <div style="color:rgba(255,255,255,0.45);font-size:0.58rem;letter-spacing:1px;margin-bottom:4px;">🌍 WAKTU DUNIA</div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);">
+          <span style="font-size:0.65rem;color:rgba(255,255,255,0.7);">🕋 Makkah Al-Mukarramah</span>
+          <span style="font-size:0.82rem;color:var(--gold);font-weight:700;">12:28</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);">
+          <span style="font-size:0.65rem;color:rgba(255,255,255,0.7);">🕌 Madinah Al-Munawwarah</span>
+          <span style="font-size:0.82rem;color:var(--gold);font-weight:700;">12:28</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);">
+          <span style="font-size:0.65rem;color:rgba(255,255,255,0.55);">🇲🇾 Kuala Lumpur</span>
+          <span style="font-size:0.82rem;color:#fff;font-weight:700;">16:28</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:5px 0;">
+          <span style="font-size:0.65rem;color:rgba(255,255,255,0.4);">🇬🇧 London</span>
+          <span style="font-size:0.75rem;color:rgba(255,255,255,0.55);font-weight:600;">09:28</span>
+        </div>
+      </div>
+      <div class="gallery-overlay"><div class="gallery-label">Waktu Dunia</div></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TESTIMONI -->
+<section id="testimoni">
+  <div class="section-head center">
+    <div class="section-label">Kata Mereka</div>
+    <h2>Dipercayai Ratusan Masjid</h2>
+    <p class="section-sub">Pengurus masjid dan surau berkongsi pengalaman menggunakan sistem TV Solat.</p>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-quote">"Sistem ni memang mudah. Pemasangan kurang dari sejam, jemaah dah boleh tengok waktu solat dengan jelas. Sebelum ni kami guna papan tulis je, sekarang dah profesional. Terima kasih TV Solat!"</p>
+      <div class="testi-divider"></div>
+      <div class="testi-author"><div class="testi-avatar">AH</div><div><div class="testi-name">Ustaz Ahmad Hafiz</div><div class="testi-place">Imam, Masjid Al-Falah, Shah Alam, Selangor</div></div></div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-quote">"Harga berpatutan, kualiti terbaik. Kami dah upgrade dari sistem lama yang selalu rosak. Pengumuman kuliah lebih teratur dan jemaah lebih mudah ikut jadual. Sangat berbaloi pelaburan ini."</p>
+      <div class="testi-divider"></div>
+      <div class="testi-author"><div class="testi-avatar">MR</div><div><div class="testi-name">En. Mohd Razif</div><div class="testi-place">AJK, Surau At-Taqwa, Johor Bahru</div></div></div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-quote">"Support teknikal memang bagus. Ada masalah sikit, diorang remote dan selesai dalam 10 minit. Tak perlu tunggu orang datang. Sangat berpuas hati dengan perkhidmatan selepas jualan."</p>
+      <div class="testi-divider"></div>
+      <div class="testi-author"><div class="testi-avatar">ZI</div><div><div class="testi-name">Zulkifli Ibrahim</div><div class="testi-place">Nazir, Masjid Nurul Iman, Alor Setar, Kedah</div></div></div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-quote">"Fungsi iqamah timer dan audio azan sangat membantu jemaah. Mereka tahu berapa minit lagi nak iqamah. Masjid kami nampak lebih moden dan teratur. Jemaah pun bertambah ramai hadir."</p>
+      <div class="testi-divider"></div>
+      <div class="testi-author"><div class="testi-avatar">HA</div><div><div class="testi-name">Hj. Azman Rashid</div><div class="testi-place">Pengerusi, Masjid Al-Hidayah, Ipoh, Perak</div></div></div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-quote">"Kami di Sabah pun boleh guna. Waktu solat tepat mengikut zon Sabah. Ejen datang pasang dan demo dengan sabar. Jemaah suka tengok TV Solat kami di pintu masuk masjid."</p>
+      <div class="testi-divider"></div>
+      <div class="testi-author"><div class="testi-avatar">SM</div><div><div class="testi-name">Sdr. Samsudin Majid</div><div class="testi-place">Setiausaha, Masjid Daerah Kota Belud, Sabah</div></div></div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-quote">"Slide pengumuman sangat berguna. Boleh kemaskini dari jauh pakai handphone. Tak perlu datang ke masjid untuk tukar pengumuman. Memang praktikal dan jimat masa pentadbir masjid."</p>
+      <div class="testi-divider"></div>
+      <div class="testi-author"><div class="testi-avatar">NF</div><div><div class="testi-name">Ustazah Norfaizah</div><div class="testi-place">Guru Kelas Al-Quran, Surau Ar-Raudhah, Putrajaya</div></div></div>
+    </div>
+  </div>
+  <div class="testi-stats-row">
+    <div class="testi-stat-box"><div class="testi-stat-num">500+</div><div class="testi-stat-label">Masjid & Surau Dipasang</div></div>
+    <div class="testi-stat-box"><div class="testi-stat-num">4.9 ★</div><div class="testi-stat-label">Rating Purata Pengguna</div></div>
+    <div class="testi-stat-box"><div class="testi-stat-num">13</div><div class="testi-stat-label">Negeri Seluruh Malaysia</div></div>
+  </div>
+</section>
+
+<!-- HARGA -->
+<section id="harga">
+  <div class="section-head center">
+    <div class="section-label">Pakej & Harga</div>
+    <h2>Pilih Pakej yang Sesuai</h2>
+    <p class="section-sub">Harga tidak termasuk TV dan upah pemasangan. Hubungi ejen kami untuk sebut harga lengkap.</p>
+  </div>
+  <div class="harga-center">
+    <div class="harga-card-single">
+      <div class="popular-tag">✦ Pakej Lengkap All-In-One</div>
+      <h3>Sistem TV Solat</h3>
+      <div class="harga-price">RM 2,400</div>
+      <div class="harga-note">Bayaran sekali sahaja &nbsp;•&nbsp; Tiada yuran bulanan</div>
+      <div class="harga-divider"></div>
+      <ul class="harga-features">
+        <li>Waktu Solat JAKIM</li><li>Iqamah Timer (5 Waktu)</li>
+        <li>Slides Pengumuman</li><li>Jadual Kuliah Auto</li>
+        <li>Audio Azan & Surah</li><li>Live TV Feed</li>
+        <li>Live Facebook Stream</li><li>Kutipan Tabung Masjid</li>
+        <li>Kemaskini Cloud Slide</li><li>Waktu Dunia</li>
+        <li>Remote Support</li><li>Tanpa Perlu Internet</li>
+      </ul>
+      <a href="https://wa.me/601XXXXXXXX?text=Assalamualaikum,%20saya%20berminat%20dengan%20sistem%20TV%20Solat%20RM2400" class="btn-card-solid" target="_blank">💬 Hubungi Ejen Sekarang</a>
+      <p class="harga-disclaimer">* Harga tidak termasuk TV dan upah pemasangan</p>
+    </div>
+  </div>
+</section>
+
+<!-- CARA ORDER -->
+<section id="cara">
+  <div class="section-head center">
+    <div class="section-label">Proses Mudah</div>
+    <h2>Cara Dapatkan TV Solat</h2>
+    <p class="section-sub">4 langkah mudah untuk masjid anda mula menggunakan sistem TV Solat.</p>
+  </div>
+  <div class="steps-grid">
+    <div class="step-item"><div class="step-num">1</div><h4>Hubungi Ejen</h4><p>WhatsApp ejen berhampiran anda. Kami ada ejen di seluruh Malaysia.</p></div>
+    <div class="step-item"><div class="step-num">2</div><h4>Pilih Pakej</h4><p>Ejen akan bantu pilih pakej terbaik mengikut keperluan masjid anda.</p></div>
+    <div class="step-item"><div class="step-num">3</div><h4>Buat Bayaran</h4><p>Bayaran mudah melalui bank transfer atau e-wallet. Resit terus dihantar.</p></div>
+    <div class="step-item"><div class="step-num">4</div><h4>Siap Dipasang</h4><p>Ejen datang ke lokasi untuk pasang dan demo sistem kepada pihak masjid.</p></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-head center">
+    <div class="section-label">Soalan Lazim</div>
+    <h2>Ada Soalan?</h2>
+    <p class="section-sub">Jawapan kepada soalan yang kerap ditanya tentang sistem TV Solat.</p>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Adakah harga termasuk TV dan kos pemasangan?<span class="arrow">▼</span></div><div class="faq-a">Tidak. Harga pakej adalah untuk perisian dan kotak TV Solat sahaja. Kos TV dan upah pemasangan dikenakan berasingan bergantung kepada keperluan masjid. Ejen kami akan berikan sebut harga lengkap.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Perlukah internet untuk sistem ini beroperasi?<span class="arrow">▼</span></div><div class="faq-a">Tidak perlu. Sistem boleh beroperasi sepenuhnya tanpa internet. Internet hanya diperlukan jika anda mahu kemaskini slide dari jarak jauh atau menggunakan fungsi Live Facebook.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Berapa lama proses pemasangan?<span class="arrow">▼</span></div><div class="faq-a">Pemasangan biasanya mengambil masa 1–2 jam termasuk demo kepada pentadbir masjid. Proses yang mudah dan pantas.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Apa yang berlaku jika ada masalah teknikal?<span class="arrow">▼</span></div><div class="faq-a">Ejen kami boleh membuat remote support tanpa perlu datang ke lokasi. Masalah biasa dapat diselesaikan dalam masa kurang dari 15 minit melalui sokongan jauh.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Bolehkah sistem ini dipasang di Sabah dan Sarawak?<span class="arrow">▼</span></div><div class="faq-a">Ya, sistem kami menyokong waktu solat JAKIM untuk seluruh Malaysia termasuk Sabah dan Sarawak. Kami juga ada ejen di kedua-dua negeri tersebut.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Bagaimana nak sertai program affiliate TV Solat?<span class="arrow">▼</span></div><div class="faq-a">Daftar percuma melalui pautan "Daftar Program Affiliate" di footer laman web ini. Anda akan dapat komisyen menarik bagi setiap jualan yang berjaya melalui rujukan anda. Tiada stok diperlukan.</div></div>
+  </div>
+</section>
+
+<!-- HUBUNGI -->
+<section id="hubungi">
+  <div class="contact-wrap">
+    <div class="contact-info">
+      <div class="section-label">Hubungi Kami</div>
+      <h2>Bersedia untuk Pasang?</h2>
+      <p>Hubungi ejen TV Solat berhampiran anda sekarang. Kami sedia membantu dari pemasangan hingga sokongan teknikal.</p>
+      <div class="contact-items">
+        <div class="contact-item"><div class="contact-icon">💬</div><div><div class="contact-item-label">WhatsApp</div><div class="contact-item-val">+60 1X-XXXX XXXX</div></div></div>
+        <div class="contact-item"><div class="contact-icon">📧</div><div><div class="contact-item-label">E-mel</div><div class="contact-item-val">info@tvsolat.live</div></div></div>
+        <div class="contact-item"><div class="contact-icon">📍</div><div><div class="contact-item-label">Kawasan Liputan</div><div class="contact-item-val">Seluruh Malaysia</div></div></div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <h3>Hantar Pertanyaan</h3>
+      <div class="form-group"><label>Nama Penuh</label><input type="text" placeholder="Nama anda" /></div>
+      <div class="form-group"><label>No. WhatsApp</label><input type="tel" placeholder="+60 1X-XXXX XXXX" /></div>
+      <div class="form-group"><label>Nama Masjid / Surau</label><input type="text" placeholder="Nama masjid / surau anda" /></div>
+      <div class="form-group">
+        <label>Negeri</label>
+        <select>
+          <option value="">-- Pilih Negeri --</option>
+          <option>Johor</option><option>Kedah</option><option>Kelantan</option><option>Melaka</option>
+          <option>Negeri Sembilan</option><option>Pahang</option><option>Perak</option><option>Perlis</option>
+          <option>Pulau Pinang</option><option>Sabah</option><option>Sarawak</option><option>Selangor</option>
+          <option>Terengganu</option><option>Kuala Lumpur</option><option>Putrajaya</option><option>Labuan</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Mesej (pilihan)</label><textarea placeholder="Pertanyaan atau maklumat tambahan..."></textarea></div>
+      <button class="btn-submit" onclick="handleSubmit(this)">Hantar Pertanyaan →</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="#" class="logo">
+        <div class="logo-box">📺</div>
+        <div class="logo-text">TV<span>Solat</span>.live</div>
+      </a>
+      <p>Sistem paparan waktu solat digital terbaik untuk masjid dan surau seluruh Malaysia.</p>
+      <div class="footer-affiliate">
+        <p>Ingin jana pendapatan sambilan dengan TV Solat?</p>
+        <a href="https://tvsolat.live/affiliate" target="_blank">💵 Daftar Program Affiliate →</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Pautan</h5>
+      <ul>
+        <li><a href="#kenapa">Kenapa Kami</a></li>
+        <li><a href="#fungsi">Fungsi</a></li>
+        <li><a href="#produk">Gambar Produk</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#harga">Harga</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Sokongan</h5>
+      <ul>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#hubungi">Hubungi Kami</a></li>
+        <li><a href="#">Manual Pengguna</a></li>
+        <li><a href="#">Remote Support</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Hubungi</h5>
+      <ul>
+        <li><a href="https://wa.me/601XXXXXXXX" target="_blank">WhatsApp Kami</a></li>
+        <li><a href="mailto:info@tvsolat.live">info@tvsolat.live</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="https://tvsolat.live/affiliate" target="_blank" style="color:var(--gold);">Program Affiliate ↗</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 <a href="#">TVSolat.live</a>. Hak Cipta Terpelihara.</p>
+    <p>Dibina dengan ❤️ untuk Masjid Malaysia</p>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lb-close" onclick="document.getElementById('lightbox').classList.remove('active')">✕</button>
+  <div class="lb-box">
+    <h3 id="lb-title"></h3>
+    <p id="lb-desc"></p>
+  </div>
+</div>
+
+<script>
+  function toggleNav(){document.getElementById('navLinks').classList.toggle('open')}
+  function toggleFaq(el){const i=el.parentElement,o=i.classList.contains('open');document.querySelectorAll('.faq-item').forEach(x=>x.classList.remove('open'));if(!o)i.classList.add('open')}
+  function handleSubmit(btn){btn.textContent='✓ Terima kasih! Kami akan hubungi anda.';btn.style.background='#2ecc71';btn.disabled=true}
+  function openLightbox(t,d){document.getElementById('lb-title').textContent=t;document.getElementById('lb-desc').textContent=d;document.getElementById('lightbox').classList.add('active')}
+  function closeLightbox(e){if(e.target===document.getElementById('lightbox'))document.getElementById('lightbox').classList.remove('active')}
+
+  function updateClock(){
+    const n=new Date(),h=String(n.getHours()).padStart(2,'0'),m=String(n.getMinutes()).padStart(2,'0'),s=h+':'+m;
+    ['liveClock','deviceClock'].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent=s});
+  }
+  updateClock();setInterval(updateClock,1000);
+
+  const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)'}})},{threshold:0.06});
+  document.querySelectorAll('.feat-card,.fungsi-item,.step-item,.testi-card,.testi-stat-box,.faq-item,.gallery-item,.spec-item').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(22px)';el.style.transition='opacity 0.55s ease,transform 0.55s ease';obs.observe(el)});
+
+  window.addEventListener('scroll',()=>{document.getElementById('navbar').style.boxShadow=window.scrollY>40?'0 4px 20px rgba(0,0,0,0.1)':'none'});
+</script>
+</body>
+</html>
